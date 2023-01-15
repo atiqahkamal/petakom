@@ -36,6 +36,26 @@ Route::get('/Manage Committee Election/Student/ElectionResultPage', function () 
     return view('Manage Committee Election/Student/ElectionResultPage');
 });
 
+Route::get('/Manage Registration/SearchProfileOption', function () {  //route for search profile
+    return view('Manage Registration/SearchProfileOption');
+});
+
+Route::get('/Manage Registration/Student/SearchStudent', function () { //route for search student page
+    return view('Manage Registration/Student/SearchStudent');
+});
+
+Route::get('/Manage Registration/Lecturer/SearchLecturer', function () { //route for search lecturer page
+    return view('Manage Registration/Lecturer/SearchLecturer');
+});
+
+Route::get('/Manage Registration/Lecturer/addLecturerProfile', function () {  //route for add lecturer page
+    return view('Manage Registration/Lecturer/addLecturerProfile');
+});
+
+Route::get('/Manage Registration/Student/addStudentProfile', function () {  //route for add student page
+    return view('Manage Registration/Student/addStudentProfile');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
