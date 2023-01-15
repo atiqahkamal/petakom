@@ -58,8 +58,16 @@ Route::get('/Manage Committee Election/Student/VotingPage', function () {
     return view('Manage Committee Election/Student/VotingPage');
 });
 
-Route::get('/Manage Committee Election/Student/ElectionResultPage', function () {
-    return view('Manage Committee Election/Student/ElectionResultPage');
+Route::get('/ElectionResultPage', function () {
+    return view('ElectionResultPage');
+});
+
+Route::get('/Manage Committee Election/Committee/CandidateListPage', function () {
+    return view('Manage Committee Election/Committee/CandidateListPage');
+});
+
+Route::get('/Manage Committee Election/Student/StudCandidateProfilePage', function () {
+    return view('Manage Committee Election/Student/StudCandidateProfilePage');
 });
 
 //Routes for Manage Activity
