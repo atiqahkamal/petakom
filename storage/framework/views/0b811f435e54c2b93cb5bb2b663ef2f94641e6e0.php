@@ -81,8 +81,8 @@
                 </div>
             </div>
         </div>
-
-        
-
+        <footer class="footer">
+            © 2022 Petakom Management System, Malaysia
+        </footer>
     </body>
 </html><?php /**PATH C:\xampp\htdocs\petakom\resources\views/Manage Registration/Student/addStudentProfile.blade.php ENDPATH**/ ?>
