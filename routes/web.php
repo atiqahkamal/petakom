@@ -48,6 +48,10 @@ Route::get('/Manage Registration/Lecturer/SearchLecturer', function () { //route
 Route::get('/Manage Registration/Student/SearchStudent', function () { //route for search student page
     return view('Manage Registration/Student/SearchStudent');
 });
+
+Route::get('/Manage Registration/Student/viewStudentProfile', function () { //test
+    return view('Manage Registration/Student/viewStudentProfile');
+});
 // end manage register
 
 Route::get('/Manage Committee Election/Student/StudCandidateListPage', function () {
