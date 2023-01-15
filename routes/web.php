@@ -36,10 +36,6 @@ Route::get('/Manage Committee Election/Student/ElectionResultPage', function () 
     return view('Manage Committee Election/Student/ElectionResultPage');
 });
 
-Route::get('/Manage Bulletin/viewBulletinListCommittee', function(){
-    return view('Manage Bulletin/viewBulletinListCommittee');
-});
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
