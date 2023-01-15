@@ -53,11 +53,10 @@
 
   .style-table{
     border-collapse: collapse;
-    margin: 25px 0;
     font-size: 14px;
     font-family: sans-serif;
     min-width: 400px;
-    width: 1020px;
+    width: 1030px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   }
 
@@ -78,10 +77,12 @@
   }
 
   .list-content{
+    margin: 25px;
+  }
+
+  .list-form-content{
+    margin: 25px;
     background-color: white;
-    margin-left: 25px;
-    margin-right: 25px;
-    margin-bottom: 25px;
   }
 
   .title-body{

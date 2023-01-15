@@ -62,7 +62,7 @@
             </div>
 
             <div class="main_content">
-                <div class="bulletin-content">
+                <div class="list-form-content">
                     <form>
                         <div class="title-body">
                             <h2>Add New Bulletin</h2>
@@ -92,7 +92,7 @@
                             </div>
                         </div>
 
-                        <button class="cancelbtn" id="cancelbtn" name="cancelbtn">Cancel</button>
+                        <button class="cancelbtn" id="cancelbtn" name="cancelbtn"><a href='/Manage Bulletin/viewBulletinListCommittee'>Cancel</a></button>
                         <button class="addbtn1" id="addbtn1" name="addbtn1">Add</button>
                         
                             

@@ -36,24 +36,42 @@ Route::get('/Manage Committee Election/Student/ElectionResultPage', function () 
     return view('Manage Committee Election/Student/ElectionResultPage');
 });
 
-Route::get('/Manage Registration/SearchProfileOption', function () {  //route for search profile
-    return view('Manage Registration/SearchProfileOption');
+//Routes for Manage Activity
+Route::get('/Manage Activity/activityListCommitteePage', function(){
+    return view('Manage Activity/activityListCommitteePage');
 });
 
-Route::get('/Manage Registration/Student/SearchStudent', function () { //route for search student page
-    return view('Manage Registration/Student/SearchStudent');
+Route::get('/Manage Activity/activityDetailsCommitteePage', function(){
+    return view('Manage Activity/activityDetailsCommitteePage');
 });
 
-Route::get('/Manage Registration/Lecturer/SearchLecturer', function () { //route for search lecturer page
-    return view('Manage Registration/Lecturer/SearchLecturer');
+Route::get('/Manage Activity/addActivityPage', function(){
+    return view('Manage Activity/addActivityPage');
 });
 
-Route::get('/Manage Registration/Lecturer/addLecturerProfile', function () {  //route for add lecturer page
-    return view('Manage Registration/Lecturer/addLecturerProfile');
+Route::get('/Manage Activity/editActivityPage', function(){
+    return view('Manage Activity/editActivityPage');
 });
 
-Route::get('/Manage Registration/Student/addStudentProfile', function () {  //route for add student page
-    return view('Manage Registration/Student/addStudentProfile');
+Route::get('/Manage Activity/activityListUsersPage', function(){
+    return view('Manage Activity/activityListUsersPage');
+});
+
+Route::get('/Manage Activity/activityDetailsUsersPage', function(){
+    return view('Manage Activity/activityDetailsUsersPage');
+});
+
+//Routes for Manage Bulletin
+Route::get('/Manage Bulletin/viewBulletinListCommittee', function(){
+    return view('/Manage Bulletin/viewBulletinListCommittee');
+});
+
+Route::get('/Manage Bulletin/addBulletin', function(){
+    return view('/Manage Bulletin/addBulletin');
+});
+
+Route::get('/Manage Bulletin/editBulletin', function(){
+    return view('/Manage Bulletin/editBulletin');
 });
 
 Route::middleware([
