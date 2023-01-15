@@ -62,8 +62,15 @@
             </div>
 
             <div class="main_content">
-                <div class="bulletin-content">
+                <div class="list-content">
                     <form>
+                    <div class="input-icons">
+                            <i class="fa-light fa-magnifying-glass"></i>    
+                            <input type="text" class="searchInput" id="searchInput" name="searchInput" placeholder="Search">
+                            <button class="searchbtn" id="searchbtn" name="searchbtn">Search</button>
+                            <button class="addbtn" id="addbtn" name="addbtn"><a href='/Manage Activity/addActivityPage'>Add New</a></button>
+                        </div>
+
                         <div class="list-table">
                             <table class="style-table" id="table-id">
                                 <thead>
@@ -75,20 +82,16 @@
 
                                 <tbody>
                                     <tr>
-                                        <td>Test</td>
-                                        <td><a href="#">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+                                        <td>Gotong Royong with FKOM</td>
+                                        <td><a href="/Manage Activity/activityDetailsCommitteePage">View</a> | <a href="/Manage Activity/editActivityPage">Edit</a> | <a href="#">Delete</a></td>
                                     </tr>
                                     <tr>
-                                        <td>Test</td>
-                                        <td><a href="#">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+                                        <td>Huawei Mobile Application</td>
+                                        <td><a href="/Manage Activity/activityDetailsCommitteePage">View</a> | <a href="/Manage Activity/editActivityPage">Edit</a> | <a href="#">Delete</a></td>
                                     </tr>
                                     <tr>
-                                        <td>Test</td>
-                                        <td><a href="#">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Test</td>
-                                        <td><a href="#">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+                                        <td>Kayak Activity with PETAKOM</td>
+                                        <td><a href="/Manage Activity/activityDetailsCommitteePage">View</a> | <a href="/Manage Activity/editActivityPage">Edit</a> | <a href="#">Delete</a></td>
                                     </tr>
                                 </tbody>
                             </table>

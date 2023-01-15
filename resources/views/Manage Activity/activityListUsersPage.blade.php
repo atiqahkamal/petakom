@@ -21,7 +21,7 @@
         </style>
         <link href="/css/style.css" rel="stylesheet">
         <link href="/css/nav.css" rel="stylesheet">
-        <link href="/css/pmsStyle.css" rel="stylesheet">
+        <link href="/css/pms.css" rel="stylesheet">
         <link href="https://fontawesome.com/" rel="stylesheet">
         <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     </head>
@@ -55,49 +55,40 @@
                     <li><a href="#">Profile</a></li>
                     <li><a href="#">Calendar</a></li>
                     <li><a href="#">Proposal</a></li>
-                    <li><a href="#">Activity</a></li>
+                    <li><a href="Manage Activity/activityListUsersPage">Activity</a></li>
                     <li><a href="#">Committee Election</a></li>
                     <li><a href="#">Bulletin</a></li>
                 </ul> 
             </div>
 
             <div class="main_content">
-                <div class="view-list-content">
+                <div class="list-content">
                     <form>
-                    <div class="list-view-table">
-                            <table class="style-view-table" id="table-view-id">
+                        <div class="list-table">
+                            <table class="style-table" id="table-id">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 320px;">Title</th>
+                                        <th style="width: 80px; text-align:center;">Action</th>
+                                    </tr>
+                                </thead>
+
                                 <tbody>
-                                <tr>
-                                    <th></th><th></th>
-                                    <th>Bob</th>
-                                    <th>Alice</th>
-                                </tr>
-                                <tr>
-                                    <th rowspan="2">Favorite</th>
-                                    <th>Color</th>
-                                    <td>Blue</td>
-                                    <td>Purple</td>
-                                </tr>
-                                <tr>
-                                    <th>Flavor</th>
-                                    <td>Banana</td>
-                                    <td>Chocolate</td>
-                                </tr>
-                                <tr>
-                                    <th rowspan="2">Least Favorite</th>
-                                    <th>Color</th> <td>Yellow</td>
-                                    <td>Pink</td>
-                                </tr>
-                                <tr>
-                                    <th>Flavor</th>
-                                    <td>Mint</td>
-                                    <td>Walnut</td>
-                                </tr>
+                                    <tr>
+                                        <td>Gotong Royong with FKOM</td>
+                                        <td><a href="#">View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Huawei Mobile Application</td>
+                                        <td><a href="#">View</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kayak Activity with PETAKOM</td>
+                                        <td><a href="#">View</a></td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
-                        
-                            
                     </form>
                 </div>
             </div>

@@ -21,7 +21,7 @@
         </style>
         <link href="/css/style.css" rel="stylesheet">
         <link href="/css/nav.css" rel="stylesheet">
-        <link href="/css/bulletinStyle.css" rel="stylesheet">
+        <link href="/css/pms.css" rel="stylesheet">
         <link href="https://fontawesome.com/" rel="stylesheet">
         <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     </head>
@@ -45,7 +45,7 @@
 
         <header class="title">
              <img src="/images/petakom-logo.png" alt="Logo">
-            MANAGE BULLETIN
+            MANAGE ACTIVITY
         </header>
         <!-- navigation bar -->
         <div class="wrapper">
@@ -55,17 +55,17 @@
                     <li><a href="#">Profile</a></li>
                     <li><a href="#">Calendar</a></li>
                     <li><a href="#">Proposal</a></li>
-                    <li><a href="#">Activity</a></li>
+                    <li><a href="/Manage Activity/activityListCommitteePage">Activity</a></li>
                     <li><a href="#">Committee Election</a></li>
                     <li><a href="#">Bulletin</a></li>
                 </ul> 
             </div>
 
             <div class="main_content">
-                <div class="bulletin-content">
+                <div class="list-form-content">
                     <form>
                         <div class="title-body">
-                            <h2>Add New Bulletin</h2>
+                            <h2>Add New Activity</h2>
                         </div>
 
                         <div class="add-form">
@@ -73,26 +73,35 @@
                                 <label for="ftitle">Title</label>
                                 <input type="text" class="add-input" id="ftitle" name="ftitle" placeholder="Enter title">
 
-                                <label for="fdesc">Description</label>
-                                <textarea class="add-input" id="fdesc" name="fdesc" rows="6" cols="50" placeholder="Enter description"></textarea>
+                                <label for="fdatestart">Time Start</label>
+                                <input type="date" class="add-input" id="fdatestart" name="fdatestart" placeholder="Choose the date start">
 
-                                <label for="fcategory">Category</label> 
-                                    <select class="dropdown-input">
-                                        <option class="dropdown" value="Select Category">Select Category</option>
-                                        <option class="dropdown" value="Link 1">Link 1</option>
-                                        <option class="dropdown" value="Link 2">Link 2</option>
-                                    </select>
+                                <label for="fdateeend">Time End</label>
+                                <input type="date" class="add-input" id="fdateeend" name="fdateeend" placeholder="Choose the date end">
+
+                                <label for="ftimestart">Time Start</label>
+                                <input type="time" class="add-input" id="ftimestart" name="ftimestart" placeholder="Choose time start">
+
+                                <label for="ftimeend">Time End</label>
+                                <input type="time" class="add-input" id="ftimeend" name="ftimeend" placeholder="Choose time end">
+
+                                <label for="flocation">Location</label>
+                                <input type="text" class="add-input" id="flocation" name="flocation" placeholder="Enter the activity location">
+
+                                <label for="fparticipation">Participation</label>
+                                <input type="text" class="add-input" id="fparticipation" name="fparticipation" placeholder="Enter the participation">
+
                             </div>
 
                             <div class="right-input">
-                                    <label for="fimage" style="margin-bottom: 10px;">Image</label> 
-                                    <input type="file" multiple>
-                                    <p>Drag your files here or click in this area.</p>
-                                    <button type="submit">Upload</button>
-                            </div>
+                                   
+                                    <label for="fdesc">Description</label>
+                                    <textarea class="add-input" id="fdesc" name="fdesc" rows="6" cols="50" placeholder="Enter description"></textarea>
+
+                                </div>
                         </div>
 
-                        <button class="cancelbtn" id="cancelbtn" name="cancelbtn">Cancel</button>
+                        <a href="/Manage Activity/activityListCommitteePage"><button class="cancelbtn" id="cancelbtn" name="cancelbtn">Cancel</button></a>
                         <button class="addbtn1" id="addbtn1" name="addbtn1">Add</button>
                         
                             
