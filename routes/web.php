@@ -20,9 +20,39 @@ Route::get('/homepage', function(){
     return view('homepage');
 });
 
+// Route for Manage Registration
 Route::get('/Manage Registration/RegNewMem', function(){
     return view('Manage Registration/RegNewMem');
 });
+
+Route::get('/Manage Registration/Lecturer/addLecturerProfile', function () {
+    return view('Manage Registration/Lecturer/addLecturerProfile');
+});
+
+Route::get('/Manage Registration/Student/addStudentProfile', function () {
+    return view('Manage Registration/Student/addStudentProfile');
+});
+
+Route::get('/Manage Registration/Student/addStudentProfile', function () {
+    return view('Manage Registration/Student/addStudentProfile');
+});
+
+Route::get('/Manage Registration/SearchProfileOption', function () {
+    return view('Manage Registration/SearchProfileOption');
+});
+
+Route::get('/Manage Registration/Lecturer/SearchLecturer', function () { //route for search lecturer page
+    return view('Manage Registration/Lecturer/SearchLecturer');
+});
+
+Route::get('/Manage Registration/Student/SearchStudent', function () { //route for search student page
+    return view('Manage Registration/Student/SearchStudent');
+});
+
+Route::get('/Manage Registration/Student/viewStudentProfile', function () { //test
+    return view('Manage Registration/Student/viewStudentProfile');
+});
+// end manage register
 
 Route::get('/Manage Committee Election/Student/StudCandidateListPage', function () {
     return view('Manage Committee Election/Student/StudCandidateListPage');
@@ -32,8 +62,16 @@ Route::get('/Manage Committee Election/Student/VotingPage', function () {
     return view('Manage Committee Election/Student/VotingPage');
 });
 
-Route::get('/Manage Committee Election/Student/ElectionResultPage', function () {
-    return view('Manage Committee Election/Student/ElectionResultPage');
+Route::get('/ElectionResultPage', function () {
+    return view('ElectionResultPage');
+});
+
+Route::get('/Manage Committee Election/Committee/CandidateListPage', function () {
+    return view('Manage Committee Election/Committee/CandidateListPage');
+});
+
+Route::get('/Manage Committee Election/Student/StudCandidateProfilePage', function () {
+    return view('Manage Committee Election/Student/StudCandidateProfilePage');
 });
 
 //Routes for Manage Activity
