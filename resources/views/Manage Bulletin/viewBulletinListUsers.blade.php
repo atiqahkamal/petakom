@@ -21,7 +21,7 @@
         </style>
         <link href="/css/style.css" rel="stylesheet">
         <link href="/css/nav.css" rel="stylesheet">
-        <link href="/css/bulletinStyle.css" rel="stylesheet">
+        <link href="/css/pms.css" rel="stylesheet">
         <link href="https://fontawesome.com/" rel="stylesheet">
         <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     </head>

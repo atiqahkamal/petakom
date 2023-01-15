@@ -21,7 +21,7 @@
         </style>
         <link href="/css/style.css" rel="stylesheet">
         <link href="/css/nav.css" rel="stylesheet">
-        <link href="/css/bulletinStyle.css" rel="stylesheet">
+        <link href="/css/pms.css" rel="stylesheet">
         <link href="https://fontawesome.com/" rel="stylesheet">
         <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
     </head>
@@ -64,6 +64,13 @@
             <div class="main_content">
                 <div class="bulletin-content">
                     <form>
+                    <div class="input-icons">
+                            <i class="fa-light fa-magnifying-glass"></i>    
+                            <input type="text" class="searchBulletin" id="searchBulletin" name="searchBulletin" placeholder="Search">
+                            <button class="searchbtn" id="searchbtn" name="searchbtn"><a href="{{route('Manage Bulletin/')}}">Search</a></button>
+                            <button class="addbtn" id="addbtn" name="addbtn">Add New</button>
+                        </div>
+
                         <div class="list-table">
                             <table class="style-table" id="table-id">
                                 <thead>
