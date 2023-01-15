@@ -62,13 +62,13 @@
             </div>
 
             <div class="main_content">
-                <div class="bulletin-content">
+                <div class="list-content">
                     <form>
                     <div class="input-icons">
                             <i class="fa-light fa-magnifying-glass"></i>    
-                            <input type="text" class="searchBulletin" id="searchBulletin" name="searchBulletin" placeholder="Search">
-                            <button class="searchbtn" id="searchbtn" name="searchbtn"><a href="{{route('Manage Bulletin/')}}">Search</a></button>
-                            <button class="addbtn" id="addbtn" name="addbtn">Add New</button>
+                            <input type="text" class="searchInput" id="searchInput" name="searchInput" placeholder="Search">
+                            <button class="searchbtn" id="searchbtn" name="searchbtn">Search</button>
+                            <button class="addbtn" id="addbtn" name="addbtn"><a href='/Manage Bulletin/addBulletin'>Add New</a></button>
                         </div>
 
                         <div class="list-table">
@@ -85,17 +85,17 @@
                                     <tr>
                                         <td>Test</td>
                                         <td>Bulletin</td>
-                                        <td><a href="#">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+                                        <td><a href="#">View</a> | <a href="/Manage Bulletin/editBulletin">Edit</a> | <a href="#">Delete</a></td>
                                     </tr>
                                     <tr>
                                         <td>Test</td>
                                         <td>Bulletin</td>
-                                        <td><a href="#">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+                                        <td><a href="#">View</a> | <a href="/Manage Bulletin/editBulletin">Edit</a> | <a href="#">Delete</a></td>
                                     </tr>
                                     <tr>
                                         <td>Test</td>
                                         <td>Bulletin</td>
-                                        <td><a href="#">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+                                        <td><a href="#">View</a> | <a href="/Manage Bulletin/editBulletin">Edit</a> | <a href="#">Delete</a></td>
                                     </tr>
                                     <tr>
                                         <td>Test</td>

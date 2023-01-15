@@ -36,6 +36,44 @@ Route::get('/Manage Committee Election/Student/ElectionResultPage', function () 
     return view('Manage Committee Election/Student/ElectionResultPage');
 });
 
+//Routes for Manage Activity
+Route::get('/Manage Activity/activityListCommitteePage', function(){
+    return view('Manage Activity/activityListCommitteePage');
+});
+
+Route::get('/Manage Activity/activityDetailsCommitteePage', function(){
+    return view('Manage Activity/activityDetailsCommitteePage');
+});
+
+Route::get('/Manage Activity/addActivityPage', function(){
+    return view('Manage Activity/addActivityPage');
+});
+
+Route::get('/Manage Activity/editActivityPage', function(){
+    return view('Manage Activity/editActivityPage');
+});
+
+Route::get('/Manage Activity/activityListUsersPage', function(){
+    return view('Manage Activity/activityListUsersPage');
+});
+
+Route::get('/Manage Activity/activityDetailsUsersPage', function(){
+    return view('Manage Activity/activityDetailsUsersPage');
+});
+
+//Routes for Manage Bulletin
+Route::get('/Manage Bulletin/viewBulletinListCommittee', function(){
+    return view('/Manage Bulletin/viewBulletinListCommittee');
+});
+
+Route::get('/Manage Bulletin/addBulletin', function(){
+    return view('/Manage Bulletin/addBulletin');
+});
+
+Route::get('/Manage Bulletin/editBulletin', function(){
+    return view('/Manage Bulletin/editBulletin');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

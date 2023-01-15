@@ -62,10 +62,10 @@
             </div>
 
             <div class="main_content">
-                <div class="bulletin-content">
+                <div class="list-form-content">
                     <form>
                         <div class="title-body">
-                            <h2>Add New Bulletin</h2>
+                            <h2>Edit Bulletin</h2>
                         </div>
 
                         <div class="add-form">
