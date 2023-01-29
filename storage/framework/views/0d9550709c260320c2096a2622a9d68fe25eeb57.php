@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,24 +28,24 @@
 
     <body class="antialiased">
         <div>
-            @if (Route::has('login'))
+            <?php if(Route::has('login')): ?>
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+                    <?php if(auth()->guard()->check()): ?>
+                        <a href="<?php echo e(url('/dashboard')); ?>" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+                    <?php else: ?>
+                        <a href="<?php echo e(route('login')); ?>" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
+                        <?php if(Route::has('register')): ?>
+                            <a href="<?php echo e(route('register')); ?>" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
+                        <?php endif; ?>
+                    <?php endif; ?>
                 </div>
-            @endif
+            <?php endif; ?>
         </div>
 
         <header class="title">
              <img src="/images/petakom-logo.png" alt="Logo">
-            MANAGE ACTIVITY
+            ManageActivity
         </header>
         <!-- navigation bar -->
         <div class="wrapper">
@@ -55,7 +55,7 @@
                     <li><a href="#">Profile</a></li>
                     <li><a href="#">Calendar</a></li>
                     <li><a href="#">Proposal</a></li>
-                    <li><a href="/Manage Activity/activityListCommitteePage">Activity</a></li>
+                    <li><a href="/ManageActivity/activityListCommitteePage">Activity</a></li>
                     <li><a href="#">Committee Election</a></li>
                     <li><a href="#">Bulletin</a></li>
                 </ul> 
@@ -65,7 +65,7 @@
                 <div class="list-form-content">
                     <form>
                         <div class="title-body">
-                            <h2>Add New Activity</h2>
+                            <h2>Edit Activity</h2>
                         </div>
 
                         <div class="add-form">
@@ -98,10 +98,10 @@
                                     <label for="fdesc">Description</label>
                                     <textarea class="add-input" id="fdesc" name="fdesc" rows="6" cols="50" placeholder="Enter description"></textarea>
 
-                                </div>
+                            </div>
                         </div>
 
-                        <a href="/Manage Activity/activityListCommitteePage"><button class="cancelbtn" id="cancelbtn" name="cancelbtn">Cancel</button></a>
+                        <a href="/ManageActivity/activityListCommitteePage"><button class="cancelbtn" id="cancelbtn" name="cancelbtn">Cancel</button></a>
                         <button class="addbtn1" id="addbtn1" name="addbtn1">Add</button>
                         
                             
@@ -114,4 +114,4 @@
             © 2022 Petakom Management System, Malaysia
         </footer>
     </body>
-</html>
+</html><?php /**PATH C:\Users\DELL\OneDrive\Documents\petakom\resources\views/ManageActivity/editActivityPage.blade.php ENDPATH**/ ?>

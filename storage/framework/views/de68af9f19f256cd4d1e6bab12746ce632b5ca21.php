@@ -1,0 +1,1 @@
+<?php /**PATH C:\Users\DELL\OneDrive\Documents\petakom\resources\views/ManageActivity/activityDetailsCommitteePage.blade.php ENDPATH**/ ?>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActivityController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -74,30 +75,21 @@ Route::get('/Manage Committee Election/Student/StudCandidateProfilePage', functi
     return view('Manage Committee Election/Student/StudCandidateProfilePage');
 });
 
-//Routes for Manage Activity
-Route::get('/Manage Activity/activityListCommitteePage', function(){
-    return view('Manage Activity/activityListCommitteePage');
-});
+//Routes for ManageActivity
+Route::resource("activity", ActivityController::class);
+Route::get('activityListCommitteePage', [App\Http\Controllers\ActivityController::class,'index']);
+Route::post('addActivityPage', [App\Http\Controllers\ActivityController::class,'store'])->name('activity.store');
+Route::get('activityListCommitteePage/{ActivityID}', [App\Http\Controllers\ActivityController::class,'edit'])->name('activity.edit');
+Route::post('activityListCommitteePage/{ActivityID}', [App\Http\Controllers\ActivityController::class,'update'])->name('activity.update');
+Route::get('activityListCommitteePage/destroy/{ActivityID}', [App\Http\Controllers\ActivityController::class,'destroy'])->name('activity.destroy');
+Route::get('activityListUsersPage', [App\Http\Controllers\ActivityController::class,'studentMenu']);
+Route::get('activityDetailsUsersPage/{ActivityID}', [App\Http\Controllers\ActivityController::class,'studentView']);
+Route::post('activityDetailsCommitteePage', [App\Http\Controllers\ActivityController::class,'show']);
+Route::resource("activityDetailsUsersPage", ActivityController::class);
+Route::get('createActivityPage', [App\Http\Controllers\ActivityController::class,'create'])->name('activity.create');
+Route::get('/click_delete/{ActivityID}','ActivityController@destroy');
 
-Route::get('/Manage Activity/activityDetailsCommitteePage', function(){
-    return view('Manage Activity/activityDetailsCommitteePage');
-});
 
-Route::get('/Manage Activity/addActivityPage', function(){
-    return view('Manage Activity/addActivityPage');
-});
-
-Route::get('/Manage Activity/editActivityPage', function(){
-    return view('Manage Activity/editActivityPage');
-});
-
-Route::get('/Manage Activity/activityListUsersPage', function(){
-    return view('Manage Activity/activityListUsersPage');
-});
-
-Route::get('/Manage Activity/activityDetailsUsersPage', function(){
-    return view('Manage Activity/activityDetailsUsersPage');
-});
 
 //Routes for Manage Bulletin
 Route::get('/Manage Bulletin/viewBulletinListCommittee', function(){

@@ -42,10 +42,17 @@
                 </div>
             @endif
         </div>
+        
+        <div>
+            @if(\Session::has('success'))
+            <div class="alert alert-danger">
+                <h4>{{\Session::get('Sucess')}}</h4>
+            <div>
+                @endif
 
         <header class="title">
              <img src="/images/petakom-logo.png" alt="Logo">
-            MANAGE ACTIVITY
+            Manage Activity
         </header>
         <!-- navigation bar -->
         <div class="wrapper">
@@ -63,12 +70,11 @@
 
             <div class="main_content">
                 <div class="list-content">
-                    <form>
                     <div class="input-icons">
-                            <i class="fa-light fa-magnifying-glass"></i>    
-                            <input type="text" class="searchInput" id="searchInput" name="searchInput" placeholder="Search">
-                            <button class="searchbtn" id="searchbtn" name="searchbtn">Search</button>
-                            <button class="addbtn" id="addbtn" name="addbtn"><a href='/Manage Activity/addActivityPage'>Add New</a></button>
+                        <i class="fa-light fa-magnifying-glass"></i>    
+                            <input type="text" class="searchInput" id="searchInput" placeholder="Search">
+                            <button class="searchbtn" id="searchbtn">Search</button>
+                            <button class="addbtn" id="addbtn"><a href="{{ route('activity.create') }}">Add New</a></button>
                         </div>
 
                         <div class="list-table">
@@ -81,22 +87,19 @@
                                 </thead>
 
                                 <tbody>
+                                    @foreach ($activities as $activity)
                                     <tr>
-                                        <td>Gotong Royong with FKOM</td>
-                                        <td><a href="/Manage Activity/activityDetailsCommitteePage">View</a> | <a href="/Manage Activity/editActivityPage">Edit</a> | <a href="#">Delete</a></td>
+                                        <td>{{$activity['activity_title']}}</td>
+                                        <td style="text-align:center;"><a href="{{ url('/activity/' . $activity->ActivityID)}}">View</a> | 
+                                            <a href="{{ route('activity.edit', $activity->ActivityID) }}">Edit</a> | 
+                                            <a href="{{ route('activity.destroy', $activity->ActivityID) }}">Delete</a> 
+                                            </form>
+                                        </td>
                                     </tr>
-                                    <tr>
-                                        <td>Huawei Mobile Application</td>
-                                        <td><a href="/Manage Activity/activityDetailsCommitteePage">View</a> | <a href="/Manage Activity/editActivityPage">Edit</a> | <a href="#">Delete</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Kayak Activity with PETAKOM</td>
-                                        <td><a href="/Manage Activity/activityDetailsCommitteePage">View</a> | <a href="/Manage Activity/editActivityPage">Edit</a> | <a href="#">Delete</a></td>
-                                    </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
-                    </form>
                 </div>
             </div>
         </div>

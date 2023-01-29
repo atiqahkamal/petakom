@@ -50,7 +50,11 @@
             </a>            
             <button class="button homepage">CALENDAR</button>
             <button class="button homepage">PROPOSAL</button>
-            <button class="button homepage">ACTIVITY</button>
+
+            <a href="/activityListCommitteePage">
+                <button class="button homepage">ACTIVITY</button>
+            </a> 
+            
 
         </div>
         <div class= "home-container">

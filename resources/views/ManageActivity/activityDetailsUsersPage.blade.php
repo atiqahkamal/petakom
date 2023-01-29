@@ -45,7 +45,7 @@
 
         <header class="title">
              <img src="/images/petakom-logo.png" alt="Logo">
-            MANAGE ACTIVITY
+            Manage Activity
         </header>
         <!-- navigation bar -->
         <div class="wrapper">
@@ -55,7 +55,7 @@
                     <li><a href="#">Profile</a></li>
                     <li><a href="#">Calendar</a></li>
                     <li><a href="#">Proposal</a></li>
-                    <li><a href="/Manage Activity/activityListCommitteePage">Activity</a></li>
+                    <li><a href="/ManageActivity/activityListUsersPage">Activity</a></li>
                     <li><a href="#">Committee Election</a></li>
                     <li><a href="#">Bulletin</a></li>
                 </ul> 
@@ -63,48 +63,50 @@
 
             <div class="main_content">
                 <div class="list-form-content">
-                    <form>
-                        <div class="title-body">
-                            <h2>Edit Activity</h2>
-                        </div>
+                    <form>                        
+                        <div class="view-table-content-detail">
+                            <table class="style-view-detail-table" id="table-view-id">
+                                <!-- <thead>
+                                    <tr>
+                                        <th style="width: 320px;">Title</th>
+                                        <th style="width: 100px;">Category</th>
+                                    </tr>
+                                </thead> -->
 
-                        <div class="add-form">
-                            <div class="left-input">
-                                <label for="ftitle">Title</label>
-                                <input type="text" class="add-input" id="ftitle" name="ftitle" placeholder="Enter title">
-
-                                <label for="fdatestart">Time Start</label>
-                                <input type="date" class="add-input" id="fdatestart" name="fdatestart" placeholder="Choose the date start">
-
-                                <label for="fdateeend">Time End</label>
-                                <input type="date" class="add-input" id="fdateeend" name="fdateeend" placeholder="Choose the date end">
-
-                                <label for="ftimestart">Time Start</label>
-                                <input type="time" class="add-input" id="ftimestart" name="ftimestart" placeholder="Choose time start">
-
-                                <label for="ftimeend">Time End</label>
-                                <input type="time" class="add-input" id="ftimeend" name="ftimeend" placeholder="Choose time end">
-
-                                <label for="flocation">Location</label>
-                                <input type="text" class="add-input" id="flocation" name="flocation" placeholder="Enter the activity location">
-
-                                <label for="fparticipation">Participation</label>
-                                <input type="text" class="add-input" id="fparticipation" name="fparticipation" placeholder="Enter the participation">
-
-                            </div>
-
-                            <div class="right-input">
-                                   
-                                    <label for="fdesc">Description</label>
-                                    <textarea class="add-input" id="fdesc" name="fdesc" rows="6" cols="50" placeholder="Enter description"></textarea>
-
-                            </div>
-                        </div>
-
-                        <a href="/Manage Activity/activityListCommitteePage"><button class="cancelbtn" id="cancelbtn" name="cancelbtn">Cancel</button></a>
-                        <button class="addbtn1" id="addbtn1" name="addbtn1">Add</button>
-                        
-                            
+                                <tbody>
+                                    <tr>
+                                        <td class="hidden">{{$activities->ActivityID}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><strong> Title : </strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{$activities->activity_title}} </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><strong> Date Start : </strong> &nbsp; {{$activities->activity_dateStart}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><strong> Date End : </strong> &nbsp; {{$activities->activity_dateEnd}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><strong> Time Start : </strong> &nbsp; {{$activities->activity_timeStart}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><strong> Time End : </strong> &nbsp; {{$activities->activity_timeEnd}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><strong> Location : </strong> &nbsp; {{$activities->activity_location}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><strong> Participation : </strong> &nbsp; {{$activities->activity_participation}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><strong> Description : </strong> &nbsp; {{$activities->activity_description}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3"><button class="cancelbtn" id="cancelbtn"><a href='/activityListUsersPage'>Back</a></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </form>
                 </div>
             </div>
